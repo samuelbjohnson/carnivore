@@ -1,3 +1,3 @@
 $(function() {
-	alert("You've been eaten");
+	alert("Welcome to Carnivore, dog.");
 });
