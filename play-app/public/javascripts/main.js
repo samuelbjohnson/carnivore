@@ -1,3 +1,3 @@
 $(function() {
-	alert("Welcome to Carnivore, dog.");
+	alert("Welcome to Carnivore, dawg.");
 });
