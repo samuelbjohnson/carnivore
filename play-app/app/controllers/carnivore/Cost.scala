@@ -9,7 +9,12 @@ import play.api.libs.json._
 
 class Cost extends Controller {
   def calc = Action { request => 
-    Ok(Json.obj("cost" -> 123.45))
+    def cost = request.queryString.get("salePrice")
+    if(cost != None){
+    	Ok(Json.obj("cost" -> cost.get(0).toDouble ))
+    } else {
+      Ok(Json.obj("error" -> "You must supply a salePrice!"))
+    }
   }
   
 }
