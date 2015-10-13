@@ -3,10 +3,12 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.carnivore.Application.index
+GET   /                controllers.carnivore.Application.index
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET   /assets/*file    controllers.Assets.versioned(path="/public", file: Asset)
 
 # RESTful price calculator
-GET		/cost						controllers.carnivore.Cost.calc
+GET   /cost            controllers.carnivore.Cost.calc
+
+GET   /cost-all/:cost   controllers.carnivore.Cost.calcAll(cost: Double, rebateAmount: Double ?= 0)

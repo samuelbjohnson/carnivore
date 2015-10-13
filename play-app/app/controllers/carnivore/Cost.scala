@@ -17,4 +17,8 @@ class Cost extends Controller {
     }
   }
   
+  def calcAll(cost: Double, rebateAmount: Double) = Action { request =>
+    Ok(Json.obj("costAll" -> (cost - rebateAmount)))
+  }
+  
 }
